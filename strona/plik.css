@@ -1,0 +1,68 @@
+html  {
+	background-image:url(tlo.png);
+	
+}
+
+
+body {
+	margin:auto;
+	max-width: 1000px; 
+	min-width: 500px; 
+	/* height:300px;  tymczasowo */
+	background-color: rgba(255,250,240,0.8);
+	border-radius:30px;
+}
+
+.obrazek {
+	float:left;
+	margin:10px;
+	
+}
+
+article {
+	width: 490px;
+	float: left;
+}
+
+p{
+	padding: 0px 20px;
+}
+
+header {
+	height:100px;
+	padding:20px;
+	background-color: rgba(0,0,100,0.8);
+	color: rgb(250,250,255);
+	border-radius:0px 0px 30px 30px ;
+}
+a {color: rgb(250,250,255);}
+
+footer {
+	clear:both;
+	height:30px;
+	padding:20px;
+	background-color: rgba(0,0,100,0.8);
+	color: rgb(250,250,255);
+	border-radius:30px;
+}
+
+li {
+	display:block;
+	float:left;
+	width:200px;
+	height:40px;
+	background-color: rgb(0,120,170);
+	margin:20px;
+	text-align:center;
+	line-height:30px;
+	font-size:30px;
+}
+
+a { 
+	color:white;
+	text-decoration:none;
+	display:block;
+	height:100%;
+}
+
+
