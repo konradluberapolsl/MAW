@@ -30,7 +30,6 @@ nav
 	box-sizing: border-box;
 	padding: 10px 50px;
 	background-color: #f4f7ff;
-	box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
     z-index: 2;
 }
 
@@ -81,9 +80,6 @@ nav
 .me:hover  {
     transform: scale(1.05);
 }
-
-
-
 
 /*Welcome section*/
 
@@ -213,7 +209,7 @@ nav
 }
 
 #projects .collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795';
     font-size: 20px;
     color: white;
 
@@ -223,7 +219,7 @@ nav
 }
   
 #projects .active-col:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796"; 
 }
 
 
@@ -242,11 +238,6 @@ nav
     color: rgb(17, 17, 17);
     font-size: 35px;
     font-weight: 500;
-}
-
-#contact .contact-icons{
-
-
 }
 
 #contact .contact-icons i{
@@ -275,3 +266,6 @@ nav
         opacity: 100%;
     }
 }
+
+/* TODO */
+/* -responsywność - nie zdążyłem :( */ 
