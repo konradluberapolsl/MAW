@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Konrad Lubera</title>
+        <meta name="description" content="Strona opowiadająca o mnie">
+        <meta name="keywords" content="o mnie, programista, młody, zadanie">
+        <meta name="author" content="Konrad Lubera">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/ce32b0d9a6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <nav class="nav">
+            <ul class="nav-bar">
+                <li><a href="#welcome" class="active-nav">Strona główna</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#projects">Moje projkety</a></li>
+                <li><a href="#contact">Skontaktuj się ze mną</a></li>
+            </ul>
+        </nav>
+    
+                <!-- <div class="header">
+                    <ul>
+                        <li><a href="#welcome">Przywitanie</a></li>
+                        <li><a href="#about">O mnie</a></li>
+                        <li><a href="#projects">Moje projekty</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div> -->
+                
+        <!-- Welcome section -->
+        <section id="welcome">
+            <div class="welcome container">
+                <div class="welcome-greeting">
+                    <h1>Dzień dobry, </h1>
+                    <h1>Nazywam się <span style="color: crimson;">Konrad Lubera</span>.</h1>
+                    <p>Jestem aspirującym programistą, na tej stronie dowiesz się kilku rzeczy o mnie. Mam nadzieję, 
+                        że zachęci Cię to do kontaktu ze mną. 
+                    </p>
+                </div>
+                <img class="me" src="img/ja1.jpg" alt="To ja idę sobie"> 
+            </div>
+        </section>
+        <!-- End of welcome section-->
+                
+        <!-- About section-->
+        <section id="about">
+            <div class="about container">
+                <img class="me" src="img/ja2.jpg" alt="To ja z e36">
+                <div class="about-info">
+                    <h1>O mnie</h1>
+                    <p>
+                    Jestem studentem informatyki na Politechnice Śląskiej na wydziale Matematyki Stosowanej, 
+                    w tym semestrze zacząłem specjalizację Programowanie Aplikacji Mobilnych. Strona którą
+                    oglądasz jest realicają mojego pierwszego zanania na przedmiot Prograwowanie Mobilnych Aplikacji Webowych. 
+                    </p> 
+                    <p>
+                    Interesuję się motoryzacją oraz, co za zaskoczenie, informatyką. Lubię spontaniczne podróże.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <!-- End of about section -->
+        
+        <!-- Projects section -->
+        <section id="projects">
+            <div class="projects container">
+                <div>
+                    <button type="button" class="collapsible">Find Undercover Cop</button>
+                    <div class="content">
+                    <p>
+                        Projekt miał na celu wykrywanie tablic rejestracyjnych nieoznakowanych
+                        aut policji. 
+                    </p>
+                    <p>
+                        Program zowstawł stworzony na system operacyjny windows za pomocą WPFa.
+                        Do rozpoznawania tablicy na obrazie użyto biblioteki Emgu.CV (wrapper OpenCv dla C#)
+                        a do rozpoznawania znaków na tablicy użyto OCR Tesseract. 
+                    </p>
+                    <p>
+                        Rezultaty działania programu były zadowalające.
+                    </p>
+                    <p>
+                        Poniżej repozytorium projektu.
+                    </p>
+                    <div id="fuc"></div>
+                    </div>
+                    
+                    <button type="button" class="collapsible">Projekt na przedmiot Języki Skryptowe</button>
+                    <div class="content">
+                    <p>
+                        Był to mój pierwszy "większy" projekt. Miałem zrealizować wybrane zadanie z konkursu Algorytmion.
+                        Wybrałem zadanie "Szyfrowanie wiadmości - Algorytmion 2015", dokładna treść w repozytorium które widzisz poniżej.
+                    </p>
+                    <p>
+                        Do realizacji zadania wybrałem język Python. Jak to działa?
+                    </p>
+                    <p>
+                        Prosto. Otóż plik server.py dokonuje stosownych obliczeń i zamian systemów liczbowych, następnie za pomocą biblioteki
+                        Matplotlib generuje wykres. Wszystkie dane wynikowe zapisywane są do pliku .txt. Plik strona.py generuje 
+                        html'a z danymi wynikowymi oraz z wykresem. Dodatkow sktypt batchowski generuje backup wszyskich plików. Wiecej informacji w dokumentacji.
+                    </p>
+                    <p>
+                        Zachęcam do sprawdzenia repozytorium.
+                    </p>
+                    <div id="skryptowe"></div>
+                    </div>
+
+                    <button type="button" class="collapsible">Volvo C70</button>
+                    <div class="content">
+                        <p>
+                            Może nie jest to projekt informatyczyn, jednak jest on dla mnie ważny.
+                        </p>
+                        <p>
+                            Bardzo lubię samochody wiec naturalnie chciałem mieć auto które będzie nietuzinkowe. 
+                            Na moje nieszczęście kupiłem takie, w delekiatnie rzecz ujmując średnim stanie. 
+                        </p>
+                        <p>
+                            Jest to Volvo C70 2.0 LPT z 2001 roku. 
+                        </p>
+                        <p>
+                            Od lutego 2018 toczę walkę ze sobą i z tym autem żeby doprowadzić je do akceptowalnego stanu.
+                            Kosztuję to masę czasu i pieniędzy ale zawsze gdy wróci od mechanika stwierdam, że warto.
+                        </p>
+                        <p> Zdjęcie mojej "cetki" widzisz w tle, jednak jeżeli chciałbyś/chciałabyś dowiedzieć się wiecej, zapraszam
+                            na mój instagram na którym od czasu do czasu opisuję co w aucie zostało zrobione.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End of project section-->
+        <!-- Contact section-->
+        <section id="contact">
+            <div class="contact container">
+            <div>
+                <h1>Skontktuj się ze mną.</h1>
+                <div class="contact-icons">
+                    <div>
+                        <a href="https://www.instagram.com/konradxyz" target="_blank"><i class="fab fa-instagram"></i></a> 
+                        <a href="https://m.me/konrad123" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/konradluberapolsl" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/konrad123/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>            
+            </div>
+            </div>
+        </section>
+        <!-- End of contact section-->
+        <!-- Footer -->
+
+        <!-- End of Footer-->
+        <footer class="footer">
+                <p> &copy; Konrad Lubera 2020<p>
+        </footer>
+
+        <script src="js/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/repo.min.js"></script>
+        <script>
+            $('#fuc').repo({ user: 'konradluberapolsl', name: 'find_undercover_cop' });
+            $('#skryptowe').repo({ user: 'konradluberapolsl', name: 'skry_pro' });
+        </script>
+
+    </body>
+</html>

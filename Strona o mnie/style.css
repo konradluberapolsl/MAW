@@ -1,0 +1,277 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+
+ul
+{
+	list-style: none;
+}
+
+nav
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 50px;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	background-color: #f4f7ff;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
+    z-index: 2;
+}
+
+.nav-bar
+{
+	display: flex;
+}
+
+.nav-bar li a
+{
+    margin-left: 10px;
+	padding: 10px 15px;
+	color: #6c707c;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-bar li a:hover, .active-nav
+{
+    font-weight: 700; 
+    color: rgb(117, 117, 117);
+	background-color: transparent;
+	border: 2px solid crimson;
+	transition: all ease 0.3s;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    
+}
+
+.me{
+    position: relative;
+    display: flex;
+    height: auto;
+    max-width: 500px;
+    opacity: 0%;
+    overflow: hidden;
+    animation: appirance 1s ease forwards;
+    animation-delay: .5s;
+    transition: .3s ease transform;
+}
+
+.me:hover  {
+    transform: scale(1.05);
+}
+
+
+
+
+/*Welcome section*/
+
+#welcome{
+    background-color: #404040;
+    background-size: cover;
+	background-position: top center;
+	position: relative;
+}
+
+#welcome .welcome-greeting{
+    display: block;
+    width: 85vh;
+    position: relative;
+    opacity: 0%;
+    animation: appirance 1s ease forwards;
+    animation-delay: .2s;
+    margin-right: 200px;
+    transition: .3s ease transform;
+}
+
+#welcome .welcome-greeting:hover{
+	transform: scale(1.1);
+}
+
+#welcome .welcome-greeting h1{
+    color: white;
+    font-size: 35px;
+}
+
+#welcome .welcome-greeting p{
+    margin-top: 10px;
+    font-weight: 400;
+    color: white;
+    font-size: large;
+    font-size: 20px;
+}
+
+/*About section*/
+
+#about{
+    background-color: #e8e8e8;
+    background-size: cover;
+	background-position: top center;
+	position: relative;
+}
+
+#about .about-info{
+    display: block;
+    width: 85vh;
+    position: relative;
+    opacity: 0%;
+    animation: appirance 1s ease forwards;
+    animation-delay: .2s;
+    margin-left: 200px;
+    transition: .3s ease transform;
+}
+
+#about .about-info:hover{
+	transform: scale(1.1);
+}
+
+#about .about-info h1{
+    color: crimson;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#about .about-info p{
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Projects section */
+
+#projects{
+    background-image: url("img/volvo.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#projects::after{
+    content: '';
+    position: absolute;
+    left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: .7;
+	z-index: -1;
+
+}
+
+#projects .collapsible{
+    width: 100vh;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease transform;
+}
+
+#projects .collapsible:hover {
+    color: white;
+    transform: scale(1.1);
+	background-color: crimson;
+}
+
+#projects .content {
+    width: 100vh;
+    padding: 0 20px;
+    background-color: white;
+    max-height: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.4;
+    overflow: auto;
+    transition: max-height 0.2s ease-out;
+}
+
+#projects .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 20px;
+    color: white;
+
+    float: right;
+    margin-left: 5px;
+
+}
+  
+#projects .active-col:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+/* Contact sectiom */
+#contact{
+    background-color: #e8e8e8;
+    background-size: cover;
+	background-position: top center;
+	position: relative;
+}
+
+#contact .container h1{
+    float: left;
+    margin-left: 30px;
+    text-transform: uppercase;
+    color: rgb(17, 17, 17);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+#contact .contact-icons{
+
+
+}
+
+#contact .contact-icons i{
+    font-size: 200px;
+    color: crimson;
+    transition: .3s ease transform;
+    margin: 30px;
+}
+
+#contact .contact-icons i:hover{
+    transform: scale(1.1);
+    color: #991212;
+}
+
+
+/* Footer */
+.footer{
+    text-align: center;
+    padding: 5px;
+    font-weight: 500;
+} 
+
+/* Key frames*/
+@keyframes appirance{
+    100%{
+        opacity: 100%;
+    }
+}
