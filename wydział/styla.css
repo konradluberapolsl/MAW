@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* autor Konrad Lubera*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
 * {
 	padding: 0;
     margin: 0;
@@ -6,7 +7,7 @@
 }
 
 html,body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 ul
@@ -18,77 +19,96 @@ a {
     text-decoration: none;
 }
 
+
+
 /* Nav bar */
 
-header{
-
+header
+{
 	text-transform: uppercase;
-	/* position: fixed; */
     width: 100%;
-    height: 200px;
-    background-color: #2140bf;
-    z-index: 1;
+    height: 100%;
+    background-color: #5369db;
     margin-bottom: 10px;
-
+    display: block;
+    text-align: center;
 }
 
-header h1{
+header h1
+{
     display: inline-block;
     margin-top: 50px;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 1.5px;
 }
 
-
-header #logo_conteiner{
-    float: left;
-    padding: 10px;
-    width: 150px;
-    height: 150px;
-}
-
-header #logo_conteiner span a img{
-    width: 100%;
-    height: 100%;
-}
-
-header div{
-    display: block;
+header div span a img
+{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 5px;
+    left:40px;
 
 }
 
+header div span input
+{
+    position: absolute;
+    right: 60px;
+    top: 122px;
+}
 
-header nav{  
+header div span button
+{
+    position: absolute;
+    right: 10px;
+    top:122px;
+}
+
+header nav
+{  
     display: flex;
 	justify-content: center;
 	align-items: center;
     box-sizing: border-box;
     margin-top: 25px;
-    background-color: #2140bf;
+    background-color: #000080;
     width: 100%;
 }
 
-header nav ul{
+header nav ul
+{
     text-align: center;
-
 }
 
-header nav ul li{
+header nav ul li
+{
     display: inline-block;
     padding: 10px;
 }
 
 
-header nav ul li:hover, .main_nav_active_li{
-    font-weight: 600; 
-    background-color: rgb(69, 69, 69, 0.6);
+header nav ul li:hover, footer nav ul li:hover 
+{
+    font-weight: 700; 
+    background-color: rgba(88, 88, 88, 0.6);
 	transition: all ease 0.3s;
 }
 
-header nav ul li a{
+.main_nav_active_li a{
+    font-weight: 800; 
+    color: #a1a1a1;
+}
+
+header nav ul li a
+{
     text-transform: uppercase;
     color: white;
 }
+
+/* Main */
 
 main{
     max-width: 1020px;
@@ -103,43 +123,71 @@ main nav{
     width: 200px;
 }
 
-main nav ul li{
-    font-size: 15px;
+main nav > ul > li> a{
+    font-size: 16px;
     padding: 2px;
+
+}
+
+
+main > nav > ul > li:nth-child(odd)
+{
+    background-color: #e6e6e6;
     color: black;
-
 }
 
-main nav ul li:nth-child(odd)
+main > nav > ul > li:nth-child(odd) a
 {
-    background-color: #d1d1d1;
+    color: black;
 }
 
-main nav ul li:nth-child(even)
+main > nav > ul > li:nth-child(even)
 {
-    background-color: #888888;
+    background-color: #000080;
 }
 
-.double ul li{
-    background-color: aqua;
+main > nav > ul > li:nth-child(even) a
+{
+    color: white;
 }
 
-/* main nav ul li:hover{
-    font-weight: 600; 
-    background-color: rgb(69, 69, 69, 0.6);
+main nav ul li:hover{
+    font-weight: 600;
 	transition: all ease 0.3s;
-} */
+}
+
+
+li.double ul, li.double_plus ul {
+    background-color: #e6e6e6;
+    color: black;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li.double ul li, li.double_plus ul li{
+    font-size: 14px;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+li.double ul li::before, li.double_plus ul li::before{
+    content: '▸';
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
 
 /* Main column */
 
 .column:nth-of-type(1){
     float: left;
     width: 600px;
-    margin: 0 10px;
+    margin: 0px 10px 10px ;
 }
 
 .column:nth-of-type(1) article{
-    border-top: 1px solid #2140bf;
+    border-top: 1px solid #000080;
     padding: 5px;
     transition: .3s ease transform;
 }
@@ -160,6 +208,12 @@ main nav ul li:nth-child(even)
     float: right;
 }
 
+.column:nth-of-type(1) article a:visited{
+    color:blue;
+}
+
+/* Right column */
+
 .column:nth-of-type(2){
     float: left;
     width: 200px;
@@ -173,24 +227,31 @@ main nav ul li:nth-child(even)
     max-width: 200px;   
 }
 
+#a001, #a005{
+    text-align: center;
+}
+
+#a001 a, #a005 a{
+    font-weight: 600;
+}
+
+
 /* Footer */
 
 footer{
     clear: both;
     text-align: center;
-    background-color: #2140bf;
-    height: 45px;
+    background-color: #000080;
+    height: 40px;
+}
+
+footer nav ul{
+    height: 100%;
 }
 
 footer nav ul li{
   display: inline-block;
   padding: 10px;
-}
-
-footer nav ul li:hover{
-    font-weight: 600; 
-    background-color: rgb(69, 69, 69, 0.6);
-	transition: all ease 0.3s;
 }
 
 footer nav ul li a{
