@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kalkulator</title>
+        <meta name="description" content="">
+        <meta name="author" content="Konrad Lubera">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="kalkulator">
+                <div id="top">
+                    <p id="equation">0<p>
+                    <input type="text" value="0">
+                </div>
+                <div id="first-row">
+                    <input class="option btn" type="button" value="sqrt">
+                    <input class="option btn" type="button" value="x^2">
+                    <input class="option btn" type="button" value="sin">
+                    <input class="option btn" type="button" value="SHIFT">
+                </div>
+                <div id="second-row">
+                    <input class="option btn" type="button" value="C">
+                    <input class="option btn" type="button" value="CE">
+                    <input class="option btn" type="button" value="⌫">
+                    <input class="option btn" type="button" value="/">
+                </div>
+                <div id="third-row">
+                    <input class="digit btn" type="button" value="7">
+                    <input class="digit btn" type="button" value="8">
+                    <input class="digit btn" type="button" value="9">
+                    <input class="option btn" type="button" value="*">
+                </div>
+                <div id="fourth-row">
+                    <input class="digit btn" type="button" value="4">
+                    <input class="digit btn" type="button" value="5">
+                    <input class="digit btn" type="button" value="6">
+                    <input class="option btn" type="button" value="-">
+                </div>
+                <div id="fifth-row">
+                    <input class="digit btn" type="button" value="1">
+                    <input class="digit btn" type="button" value="2">
+                    <input class="digit btn" type="button" value="3">
+                    <input class="option btn" type="button" value="+">
+                </div>
+                <div id="sixth-row">
+                    <input class="digit big btn" type="button" value="0">
+                    <input class="option btn" type="button" value=".">
+                    <input class="option btn" type="button" value="=">
+                </div>
+            </div>
+        </div>    
+        <script src="app.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>
