@@ -39,7 +39,7 @@ html, body{
     font-size: 2.5rem;
 }
 
-input[type='text']{
+#text{
     text-align: right;
     color: #eeeeee;
     background-color: transparent;
@@ -94,8 +94,6 @@ input[type='text']{
 
 .big{
     width: 50%;
-    /* height: 100px; */
-
 }
 
 @media only screen and (max-width: 802px){
@@ -108,7 +106,7 @@ input[type='text']{
         font-size: 1rem;
     }
 
-    input[type='text']{
+    #text{
         font-size: 2rem;
     }
 
@@ -126,12 +124,12 @@ input[type='text']{
         font-size: 1rem;
     }
 
-    input[type='text']{
+    #text{
         font-size: 1.5rem;
     }
 
     .btn{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     
     html,body{
