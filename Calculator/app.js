@@ -6,13 +6,22 @@ const buttons = document.querySelectorAll("input[type='button']");
 const text = document.querySelector("input[type='text']")
 var eq = document.getElementById("eq")
 var i = 0;
-var number = "";
+var element = "";
 var equation = "";
-var operators = ['+','-','/','*']
+var operators = ['+','-','/','*'];
+var wasEqualsClicked = false;
 
-buttons.forEach(element => {
-    element.addEventListener('click', ()=>{
-        if(element.value=='⇧')
+function doCE(){
+    equation= "";
+    element = "";
+    eq.innerHTML = "0";
+    text.value = "0";
+}
+
+
+buttons.forEach(item => {
+    item.addEventListener('click', ()=>{
+        if(item.value=='⇧')
         {
             i++
             if(i%2!=0)
@@ -31,56 +40,72 @@ buttons.forEach(element => {
             }
         }
         
-        if(!Number.isNaN(parseInt(element.value)) || element.value=='.')
+        if((!Number.isNaN(parseInt(item.value)) || item.value=='.'))
         {
-            if(element.value == '.' && text.value=='0')
+           if(wasEqualsClicked)
+           {
+               doCE();
+               wasEqualsClicked = false;
+           }
+           
+            if(item.value == '.' && text.value=='0')
             {
-                number+= "0."
+                element+= text.value + "."
             }
-            else
+            else 
             {
-                number+=element.value;
+                element+=item.value;
             }
 
-            text.value= number;
+            text.value= element;
         }
 
-        if(operators.includes(element.value))
+        if(operators.includes(item.value))
         {
-            if (number!='' ){
+            if (element!='' ){
                 if(eq.innerHTML=='0')
                 {
                     eq.innerHTML=''
                 }
-                eq.innerHTML+=number + element.value;
-                number = '';
+                equation+=element + item.value;
+                eq.innerHTML = equation;
+                element = '';
                 text.value='';
+                if(wasEqualsClicked)
+                {
+                    wasEqualsClicked = false;
+                }
             }
         }
 
-        if (element.value == "=")
+        if (item.value == "=")
         {
+            if(eq.innerHTML=='0')
+            {
+                eq.innerHTML=''
+            }
             eq.innerHTML+=text.value 
-            text.value = eval(eq.innerHTML);
+            var result = eval(eq.innerHTML);
+            text.value = result;
+            element = result;
+            equation = "";
+            wasEqualsClicked = true;
         }
 
-        if(element.value=="⌫" && text.value!='')
+        if(item.value=="⌫" && text.value!='')
         {
-            number = number.slice(0,-1)
-            text.value = number
+            element = element.slice(0,-1)
+            text.value = element
         }
 
-        if (element.value=="CE")
+        if (item.value=="CE")
         {
-            equation= "";
-            number = "";
-            eq.innerHTML = "0";
-            text.value = "0";
+            doCE();
         }
 
-        if (element.value == "C" && text.value!='0')
+        if (item.value == "C" && text.value!='0')
         {
-            number="";
+            element="";
             text.value="0";
         }
 
