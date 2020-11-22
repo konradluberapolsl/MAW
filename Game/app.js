@@ -1,18 +1,69 @@
 // autor Konrad Lubera
 var moves = 0;
+var b = [];
 
-function createBlocks(x_size,y_size){
-    var blocks = new Array(y_size);
+function flipArray(array)
+{
+    var fliped = new Array(array[0].length);
+
+    for(var i=0; i<fliped.length; i++)
+    {
+        fliped[i] = new Array(array.length);
+        for (var j=0; j<fliped[i].length; j++)
+        {
+            fliped[i][j] = array[j][i];
+        }
+    }
+    return fliped;
+}
+
+function createGridColumns(size)
+{
     var board = document.getElementById("board")
     var grid_columns = ""
-    const colors = ['rgb(255, 99, 99)', 'rgb(245, 245, 245)'];
-
-    for (var i =0 ; i<x_size; i++)
+    for (var i =0 ; i<size; i++)
     {
         grid_columns+= "auto "
     }
     board.style.gridTemplateColumns = grid_columns;
+}
 
+function flipBoard()
+{
+    var board = document.getElementById("board")
+    var fliped = flipArray(b);
+    createGridColumns(fliped[0].length);
+    board.querySelectorAll('*').forEach(n => n.remove());
+    for (var i = 0; i < fliped.length; i++) {
+        for(var j = 0; j < fliped[i].length; j++ ){
+            board.appendChild(fliped[i][j]);
+        }
+    }
+    return fliped
+}
+
+
+function createBlocks(x_size,y_size, orientation){
+    var board = document.getElementById("board")
+
+    if(orientation == "landscape"){
+        if( b.length == 0)
+        {
+            var tmp = x_size;
+            x_size = y_size;
+            y_size = tmp;
+        }
+        else{
+           return  flipBoard();
+        }
+    }
+    else if (orientation=="horiznotal" && b.length!=0)
+    {
+        return flipBoard();
+    }
+    createGridColumns(x_size);
+    var blocks = new Array(y_size);
+    const colors = ['rgb(255, 99, 99)', 'rgb(245, 245, 245)'];
     for (var i = 0; i < y_size; i++) {
         blocks[i] = new Array(x_size);
         for(var j = 0; j < x_size; j++ ){
@@ -37,14 +88,11 @@ function updateBlocks(blocks){
     blocks.forEach(item => {
         item.forEach(block => {
             block.addEventListener('click', () => {
-                //block.style.backgroundColor = 'whitesmoke';
-                //console.log(blocks.indexOf(item), item.indexOf(block));  
                 updateMoves();
-                lookForWin(blocks);
                 var y = blocks.indexOf(item)
                 var x = item.indexOf(block);
-                //console.log(checkPostion(x,y,blocks));
                 changeColor(checkPostion(x,y,blocks),x,y,blocks);
+                lookForWin(blocks);
         });
         });      
     });
@@ -164,5 +212,17 @@ function changeColor(position, x_index, y_index, board)
 var x_size = 5;
 var y_size = 5;
 
+var landscape = window.matchMedia("only screen and (max-width: 850px) and (orientation: landscape)")
 
-updateBlocks(createBlocks(x_size,y_size));
+function handleOrientatnioChange(e) {
+    if(e.matches) {
+        b = createBlocks(x_size,y_size,"landscape")
+    }
+    else
+        b = createBlocks(x_size,y_size,"horiznotal")
+}
+
+
+landscape.addListener(handleOrientatnioChange)
+handleOrientatnioChange(landscape)
+updateBlocks(b);
