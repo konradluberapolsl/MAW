@@ -209,10 +209,13 @@ function changeColor(position, x_index, y_index, board)
     }
 }
 
+
+// Plansza jest w pełni modyfikowalna, wystarczy zmienić te zmienne
 var x_size = 5;
 var y_size = 5;
 
-var landscape = window.matchMedia("only screen and (max-width: 850px) and (orientation: landscape)")
+var landscape = window.matchMedia("only screen and (max-width: 850px) and (orientation: landscape), " +
+    "only screen and (max-height: 320px) and (orientation: landscape)")
 
 function handleOrientatnioChange(e) {
     if(e.matches) {
@@ -226,3 +229,6 @@ function handleOrientatnioChange(e) {
 landscape.addListener(handleOrientatnioChange)
 handleOrientatnioChange(landscape)
 updateBlocks(b);
+
+//TODO: Hint: https://www.logicgamesonline.com/lightsout/tutorial.html
+//TODO: https://www.quora.com/What-is-the-algorithm-for-solving-lights-out-puzzle-in-minimum-number-of-moves-in-Java
