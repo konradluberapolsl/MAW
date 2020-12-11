@@ -1,3 +1,4 @@
+/*autor Konrad Lubera*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
 * {
 	padding: 0;
@@ -26,36 +27,35 @@ html, body{
 .top{
     text-align: center;
     width: 100%;
-    height: 25%;
+    height: 20%;
+
+
 }
 
 .top h1{
-    padding-top: 15px;
+    padding-top: 50px;
     font-size: 3rem;
     letter-spacing: 3px;
     font-weight: 300;
+
 }
 
 .top p{
-    padding-top: 15px;
+
     font-size: 1.5rem;
     font-weight: 300;
+
 }
 
 .hint{
     width: 40%;
     height: 30%;
-    margin-top: 20px;
+    font-weight: 300;
     background-color: #ffbd69;
-    vertical-align: middle;
     text-align: center;
-
-
     color: white;
     font-size: 1.5rem;
-    font-weight: 300;
     cursor: pointer;
-
     text-decoration: none;
     border: none;
     border-radius: 15px;
@@ -73,40 +73,127 @@ html, body{
 
 .board_container{
     width: 100%;
-    height: 75%;
+    height: 80%;
     padding: 10px;
-
 }
 
 #board{
     background-color: #543864;
     width: 100%;
     height: 100%;
+    display: grid;
+    /*grid-template-columns: auto auto auto auto auto auto ;*/
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding: 5px;
 }
 
 .block{
-    width: 17%;
-    height: 14.3%;
-    /* padding: 10px; */
-    display: inline-block;
+    width: 100%;
+    height: 100%;
     vertical-align: middle;
     text-align: center;
-    background-color: #ff6363;
-
     border-radius: 15px;
     color: white;
     cursor: pointer;
     text-decoration: none;
-    margin-right: -6px ;
-    border: solid 7px #543864;
+    border: none;
     transition: all 0.2s ease-in-out;
     outline: none;
 }
 
-.block:hover{
-    background-color:  #ffbd69;
-}
+
 
 .block:active{
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
+}
+
+
+@media only screen and (max-width: 802px){
+
+    html,body{
+        padding: 1px;
+    }
+    .container{
+        width: 100%;
+        height: 99vh;
+    }
+
+    .top h1{
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    .top p{
+        font-size: 1.2rem;
+
+    }
+
+
+    .hint{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .block:hover{
+        background-color:  #ffbd69 !important;
+    }
+}
+
+@media only screen and (min-width: 803px) and (max-width: 1100px){
+    .container{
+        width: 80%;
+        height: 95vh;
+    }
+
+    .block:hover{
+        background-color:  #ffbd69 !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+
+    html,body{
+        padding: 1px;
+    }
+
+
+    .top h1{
+        font-size: 2rem;
+        padding-top: 0px;
+    }
+
+    .container{
+        width: 100%;
+        min-height: 300px;
+        height: 99vh;
+    }
+
+
+
+}
+
+@media only screen and (max-height: 320px) and (orientation: landscape){
+
+    .top h1{
+        font-size: 1.2rem;
+        padding-top: 0px;
+    }
+
+    .container{
+        width: 100%;
+        min-height: 200px;
+        height: 99vh;
+    }
+
+
+    .top p{
+        font-size: 1rem;
+
+    }
+
 }
