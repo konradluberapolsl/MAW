@@ -1,0 +1,53 @@
+/* autor Konrad Lubera */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #939597;
+
+}
+html, body{
+    color: #eeeeee;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.container{
+    text-align: center;
+    padding: 0px 35px;
+    background-color: #f5df4d;
+    margin: auto;
+    width: 75%;
+    height: 93vh;
+    min-height: 500px;
+    border: solid 1px #303841;
+    box-shadow: 0 8px 50px -7px black;
+}
+
+.container h1{
+    font-weight: 400;
+    margin: 35px 0 28px 0;
+
+}
+
+.container form{
+
+    display: grid;
+    text-align: left;
+    grid-template-columns: auto  auto;
+    grid-row-gap: 10px;
+}
+
+#two {
+    text-align: center;
+    display: block;
+}
+
+#two input:not(:first-child){
+    margin-left: 50px;
+
+}
